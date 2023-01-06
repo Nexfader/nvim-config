@@ -9,5 +9,5 @@ vim.api.nvim_create_autocmd('BufEnter', {
     end
 
     vim.opt.titlestring = titlestring
-  end
+  end,
 })

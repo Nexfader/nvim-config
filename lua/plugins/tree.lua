@@ -1,7 +1,7 @@
 return {
   'kyazdani42/nvim-tree.lua',
   config = function()
-    require('nvim-tree').setup {
+    require('nvim-tree').setup({
       open_on_setup = true,
       filters = { custom = { '^.git$' } },
       hijack_cursor = true,
@@ -16,6 +16,6 @@ return {
           enable = true,
         },
       },
-    }
+    })
   end,
 }

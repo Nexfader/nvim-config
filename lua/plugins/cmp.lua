@@ -40,14 +40,13 @@ return {
               fallback()
             end
           end, { 'i', 's' }),
-
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
         }),
         experimental = {
-          ghost_text = true
+          ghost_text = true,
         },
       })
     end,

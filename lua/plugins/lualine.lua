@@ -1,7 +1,7 @@
 return {
   'nvim-lualine/lualine.nvim',
   config = function()
-    require('lualine').setup {
+    require('lualine').setup({
       options = {
         globalstatus = true,
         component_separators = '',
@@ -12,8 +12,8 @@ return {
         lualine_c = { 'diagnostics', 'filename' },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
-        lualine_z = { 'location' }
+        lualine_z = { 'location' },
       },
-    }
+    })
   end,
 }

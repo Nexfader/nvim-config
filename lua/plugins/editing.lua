@@ -3,14 +3,14 @@ return {
     'kylechui/nvim-surround',
     config = function()
       require('nvim-surround').setup()
-    end
+    end,
   },
   {
     'numToStr/Comment.nvim',
     keys = { 'gc', 'gb' },
     config = function()
       require('Comment').setup()
-    end
+    end,
   },
   'editorconfig/editorconfig-vim',
   {

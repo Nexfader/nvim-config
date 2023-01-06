@@ -5,7 +5,7 @@ return {
       require('nvim-treesitter.install').update({ with_sync = true })
     end,
     config = function()
-      require('nvim-treesitter.configs').setup {
+      require('nvim-treesitter.configs').setup({
         highlight = {
           enable = true,
         },
@@ -30,7 +30,7 @@ return {
             include_surrounding_whitespace = true,
           },
         },
-      }
+      })
 
       vim.o.foldmethod = 'expr'
       vim.o.foldexpr = 'nvim_treesitter#foldexpr()'

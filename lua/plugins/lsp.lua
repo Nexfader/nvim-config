@@ -9,12 +9,6 @@ return {
       vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
       vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 
-      -- vim.api.nvim_create_autocmd('BufWritePost', {
-      --   callback = function()
-      --     vim.lsp.buf.format()
-      --   end
-      -- })
-
       local on_attach = function(client, bufnr)
         local bufopts = { remap = false, silent = true, buffer = bufnr }
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -38,20 +32,20 @@ return {
       -- lspconfig['tsserver'].setup{
       --   on_attach = on_attach,
       -- }
-      lspconfig['volar'].setup {
+      lspconfig['volar'].setup({
         on_attach = on_attach,
         filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
-      }
-      lspconfig['intelephense'].setup {
+      })
+      lspconfig['intelephense'].setup({
         on_attach = on_attach,
-      }
-      lspconfig['clangd'].setup {
+      })
+      lspconfig['clangd'].setup({
         on_attach = on_attach,
-      }
-      lspconfig['pyright'].setup {
+      })
+      lspconfig['pyright'].setup({
         on_attach = on_attach,
-      }
-      lspconfig['sumneko_lua'].setup {
+      })
+      lspconfig['sumneko_lua'].setup({
         on_attach = on_attach,
         settings = {
           Lua = {
@@ -69,7 +63,7 @@ return {
             },
           },
         },
-      }
+      })
 
       local null_ls = require('null-ls')
       null_ls.setup({
@@ -81,5 +75,5 @@ return {
         },
       })
     end,
-  }
+  },
 }
