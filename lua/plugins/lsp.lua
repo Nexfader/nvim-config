@@ -39,13 +39,34 @@ return {
       lspconfig['intelephense'].setup({
         on_attach = on_attach,
       })
+      lspconfig['rust_analyzer'].setup({
+        on_attach = on_attach,
+        settings = {
+          ['rust-analyzer'] = {
+            imports = {
+              granularity = {
+                group = 'module',
+              },
+              prefix = 'self',
+            },
+            cargo = {
+              buildScripts = {
+                enable = true,
+              },
+            },
+            procMacro = {
+              enable = true,
+            },
+          },
+        },
+      })
       lspconfig['clangd'].setup({
         on_attach = on_attach,
       })
       lspconfig['pyright'].setup({
         on_attach = on_attach,
       })
-      lspconfig['sumneko_lua'].setup({
+      lspconfig['lua_ls'].setup({
         on_attach = on_attach,
         settings = {
           Lua = {
@@ -72,6 +93,8 @@ return {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.prettierd,
           null_ls.builtins.diagnostics.eslint_d,
+          null_ls.builtins.code_actions.eslint_d,
+          null_ls.builtins.code_actions.refactoring,
         },
       })
     end,

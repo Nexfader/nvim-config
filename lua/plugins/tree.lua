@@ -2,7 +2,6 @@ return {
   'kyazdani42/nvim-tree.lua',
   config = function()
     require('nvim-tree').setup({
-      open_on_setup = true,
       filters = { custom = { '^.git$' } },
       hijack_cursor = true,
       view = {
@@ -16,6 +15,12 @@ return {
           enable = true,
         },
       },
+    })
+
+    vim.api.nvim_create_autocmd({ 'VimEnter' }, {
+      callback = function()
+        require('nvim-tree.api').tree.open()
+      end,
     })
   end,
 }
