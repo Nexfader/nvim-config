@@ -1,4 +1,6 @@
 require('core.options')
+require('core.filetype')
+require('core.neovide')
 require('core.keymaps')
 require('core.lazy')
 require('core.title')

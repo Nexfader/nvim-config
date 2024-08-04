@@ -27,6 +27,7 @@ require('lazy').setup('plugins', {
         'matchit',
         'tar',
         'tarPlugin',
+        'tohtml',
         'rrhelper',
         'spellfile_plugin',
         'vimball',

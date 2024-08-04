@@ -8,12 +8,20 @@ return {
         adaptive_size = true,
         side = 'left',
         width = 25,
-        hide_root_folder = true,
       },
       renderer = {
+        root_folder_label = false,
         indent_markers = {
           enable = true,
         },
+      },
+      update_focused_file = {
+        enable = true,
+        update_root = {
+          enable = false,
+          ignore_list = {},
+        },
+        exclude = false,
       },
     })
 

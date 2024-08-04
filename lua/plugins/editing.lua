@@ -6,27 +6,16 @@ return {
     end,
   },
   {
-    'numToStr/Comment.nvim',
-    keys = { 'gc', 'gb' },
-    config = function()
-      require('Comment').setup()
-    end,
-  },
-  'editorconfig/editorconfig-vim',
-  {
-    'windwp/nvim-autopairs',
-    config = function()
-      require('nvim-autopairs').setup()
-    end,
+    'folke/ts-comments.nvim',
+    event = 'VeryLazy',
   },
   {
-    'ThePrimeagen/refactoring.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-treesitter/nvim-treesitter',
-    },
-    config = function()
-      require('refactoring').setup()
+    'echasnovski/mini.pairs',
+    event = 'VeryLazy',
+    config = function(_, opts)
+      require('mini.pairs').setup({
+        modes = { insert = true, command = true, terminal = false },
+      })
     end,
   },
 }
